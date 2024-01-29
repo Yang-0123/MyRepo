@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
 
     // h: Help
     // e [msg]: Echo message
-    while ((c = getopt(argc, argv, "he:")) != -1) {
+    while ((c = getopt(argc, argv, "hen:")) != -1) {
         has_option = 1;
 
         switch (c) {
