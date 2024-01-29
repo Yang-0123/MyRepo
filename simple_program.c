@@ -7,6 +7,7 @@ int main(int argc, char **argv) {
     int has_option = 0;
 
     char *echo_msg = NULL;
+    char *name = NULL;
 
     // h: Help
     // e [msg]: Echo message
@@ -19,11 +20,15 @@ int main(int argc, char **argv) {
                 puts("\nOptions:");
                 puts("\t-h: Print help message");
                 puts("\t-e [msg]: Echo message");
-                return 0;
+                puts("\t-n Print Hi [name]");
+		return 0;
             
             case 'e':
                 echo_msg = optarg;
                 break;
+	    case 'n':
+		name = optarg;
+		printf("Hi %s",name);
         }
     }
 
